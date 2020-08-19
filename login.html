@@ -13,7 +13,6 @@
 <!-- 3.顶部log -->
 <div class="layui-main">
     <img src="/assets/images/logo.png" alt="">
-
 </div>
 <!-- 4.注册和登陆区域 -->
 <div class="loginAndRegBox">
@@ -21,17 +20,57 @@
     <div class="titleBox"></div>
     <!-- 4.2登陆区域 -->
     <div class="login-box">
-        <h1>1111</h1>
-        <a href="javascript:;" id="link_reg">去注册</a>
+        <form class="layui-form" id="form_login">
+            <div class="layui-form-item">
+                <input type="text" name="username" required lay-verify="required" placeholder="请输入账号" autocomplete="off"
+                    class="layui-input">
+            </div>
+            <div class="layui-form-item">
+                <input type="text" name="password" required lay-verify="required|pwd" placeholder="请输入密码"
+                    autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-form-item">
+                <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>登陆</button>
+            </div>
+
+            <div class="layui-form-item links">
+                <a href="javascript:;" id="link_reg">去注册</a>
+            </div>
+        </form>
     </div>
-    <!-- 4.3登陆区域 -->
+    <!-- 4.3注册区域 -->
     <div class="reg-box" style="display: none;">
-        <h1>222</h1>
-        <a href="javascript:;" id="link_login">去登陆</a>
+        <form class="layui-form" id="form_reg">
+            <div class="layui-form-item">
+                <input type="text" name="username" required lay-verify="required" placeholder="请输入账号" autocomplete="off"
+                    class="layui-input">
+            </div>
+            <div class="layui-form-item">
+                <input type="text" name="password" required lay-verify="required|pwd" placeholder="请输入密码"
+                    autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-form-item">
+                <input type="text" name="repassword" required lay-verify="required|pwd|repwd" placeholder="请确认密码"
+                    autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-form-item">
+                <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>注册</button>
+            </div>
+
+            <div class="layui-form-item links">
+                <a href="javascript:;" id="link_login">去登陆</a>
+            </div>
+        </form>
+
     </div>
+
 </div>
+<!-- 5.0引入layui.js文件 -->
+<script src="/assets/lib/layui/layui.all.js"></script>
 <!-- 5.1引入jquery文件 -->
 <script src="/assets/lib/jquery.js"></script>
+<!-- 导入自己封装的baseAPI.js -->
+<script src="/assets/js/baseAPI.js"></script>
 <!-- 5.2引入login文件 -->
 <script src="/assets/js/login.js"></script>
 
